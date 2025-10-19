@@ -21,7 +21,6 @@ public class Fixed_Secure_Cookie_Flag_Nowak_Kajetan implements HttpRequest {
                 .secure(true)
                 .httpOnly(true)
                 .maxAgeSeconds(60)
-                .sameSite("Lax")
                 .build().toString();
     }
 

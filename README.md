@@ -13,7 +13,14 @@ Klasa [Fixed_Secure_Cookie_Flag_Nowak_Kajetan](src/main/java/org/ka3wo/cookiefla
 ustawia bezpieczne id sesji domyślnie
 
 ### Testy jednostkowe dla Secure Cookie Flag
-![test_cookie_flag](img/test_cookie_flag.png)
+Wyniki testów są zapisywane w pliku [cookie_results.txt](./test_artifacts/cookie_results.txt). Przykładowe wyniki:
+```txt
+2025-10-19T08:33:33.388303170Z | fixed.process | payload=ATTACK_STRING_1 | result=Set-Cookie: sessionId=qfYvRuyGQJGlvxJEFGWlLotIEpqPIU7tgpYIZ28eDmc; userId=eedaaeb6-3eca-4688-9ad6-e1c3154f02e8; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
+2025-10-19T08:33:33.390306230Z | fixed.process | payload=faked-session | result=Set-Cookie: sessionId=G91uNbLe__t6Tvk2DJzYYm5KCIFS_oRvNjHfM-L4-Zs; userId=ad30f1dc-84e2-4f7d-9db1-92aab7242e8c; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
+2025-10-19T08:33:33.390663569Z | fixed.process | payload=user-input-session | result=Set-Cookie: sessionId=LE8zNYdBn7oQAEC5xPnvGvEuC6NfaGxS_xOIQ6oJf04; userId=35ea6886-f77b-4253-864d-eba6d3f295b1; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
+2025-10-19T08:33:33.390928690Z | fixed.process | payload=injected_value_123 | result=Set-Cookie: sessionId=7G7t7-3DIQy1K_EE7yd8OF9oHsZ_zxYKGMfEb1wNamY; userId=7da33119-e25d-48da-ab29-ab895a474e8a; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
+...
+```
 
 ## XPath Injection
 
@@ -27,4 +34,19 @@ Dodatkowo metoda [XMLUtil.loadDocument()](src/main/java/org/ka3wo/xpath/XMLUtil.
 oraz niechcianym ładowaniem zewnętrznych DTD i plików.
 
 ### Testy jednostkowe dla XPath Injection
-![test_xpath_injection](img/test_xpath_injection.png)
+Wyniki testów są zapisywane w pliku [xpath_results.txt](./test_artifacts/xpath_results.txt). Przykładowe wyniki:
+```txt
+2025-10-19T08:33:33.439044174Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:33:33.442274591Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:33:33.444766445Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:33:33.447003343Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:33:33.449183565Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:33:33.457668515Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:33:33.460433031Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:33:33.462395529Z | vulnerable.queryByUsername | payload=bob | result=no-match
+...
+```
+
+## Uruchamianie testów
+W folderze root należy wywołać komendę `docker-compose run --rm tests`. \
+Testy są wykonywane w skonteneryzowanym środowisku Docker, a następnie wyniki zapisywane są w plikach `cookie_result.txt` oraz `xpath_result.txt`.

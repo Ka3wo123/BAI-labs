@@ -1,0 +1,10 @@
+services:
+  tests:
+    build: .
+    container_name: repo-tests
+    volumes:
+      - ./:/workspace:rw
+    tty: true
+    environment:
+      - CI=true
+    stdin_open: false

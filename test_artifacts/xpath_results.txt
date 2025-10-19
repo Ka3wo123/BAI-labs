@@ -1,0 +1,80 @@
+2025-10-19T08:33:33.439044174Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:33:33.442274591Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:33:33.444766445Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:33:33.447003343Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:33:33.449183565Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:33:33.457668515Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:33:33.460433031Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:33:33.462395529Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:33:33.466483983Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:33:33.468482333Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:35:15.819492962Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:35:15.823187154Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:35:15.825757024Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:35:15.828147458Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:35:15.830791125Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:35:15.839426933Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:35:15.842418232Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:35:15.844536398Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:35:15.849027188Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:35:15.851261151Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:39:16.164824240Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:39:16.169277623Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:39:16.172743988Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:39:16.176030005Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:39:16.179104567Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:39:16.187123684Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:39:16.190053468Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:39:16.192158911Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:39:16.196139032Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:39:16.198204182Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:41:07.558927040Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:41:07.562237962Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:41:07.564723599Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:41:07.567185574Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:41:07.569420899Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:41:07.577730068Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:41:07.580784623Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:41:07.582843746Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:41:07.586898442Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:41:07.588920720Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:42:29.596117218Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:42:29.600225523Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:42:29.603680856Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:42:29.606995638Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:42:29.610231433Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:42:29.618880705Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:42:29.622887615Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:42:29.625683419Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:42:29.630034857Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:42:29.632008392Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:43:36.939443283Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:43:36.942661192Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:43:36.945126604Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:43:36.947554800Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:43:36.949718396Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:43:36.957845281Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:43:36.960680897Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:43:36.962729411Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:43:36.966594503Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:43:36.968594215Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:45:45.157133285Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:45:45.160284963Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:45:45.162787705Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:45:45.165147764Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:45:45.167360059Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:45:45.175484223Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:45:45.178303325Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:45:45.180392485Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:45:45.184306680Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:45:45.186188328Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T08:46:39.778773831Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T08:46:39.781948699Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T08:46:39.784394949Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T08:46:39.786709045Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T08:46:39.788905863Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T08:46:39.796929089Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T08:46:39.799788951Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T08:46:39.801845733Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T08:46:39.805696167Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T08:46:39.807777037Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match

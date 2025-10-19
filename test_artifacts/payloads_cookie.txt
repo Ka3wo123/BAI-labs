@@ -1,0 +1,5 @@
+ATTACK_STRING_1
+faked-session
+user-input-session
+injected_value_123
+"double-quote"
