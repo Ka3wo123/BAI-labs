@@ -15,10 +15,12 @@ ustawia bezpieczne id sesji domyślnie
 ### Testy jednostkowe dla Secure Cookie Flag
 Wyniki testów są zapisywane w pliku [cookie_results.txt](./test_artifacts/cookie_results.txt). Przykładowe wyniki:
 ```txt
-2025-10-19T08:33:33.388303170Z | fixed.process | payload=ATTACK_STRING_1 | result=Set-Cookie: sessionId=qfYvRuyGQJGlvxJEFGWlLotIEpqPIU7tgpYIZ28eDmc; userId=eedaaeb6-3eca-4688-9ad6-e1c3154f02e8; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
-2025-10-19T08:33:33.390306230Z | fixed.process | payload=faked-session | result=Set-Cookie: sessionId=G91uNbLe__t6Tvk2DJzYYm5KCIFS_oRvNjHfM-L4-Zs; userId=ad30f1dc-84e2-4f7d-9db1-92aab7242e8c; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
-2025-10-19T08:33:33.390663569Z | fixed.process | payload=user-input-session | result=Set-Cookie: sessionId=LE8zNYdBn7oQAEC5xPnvGvEuC6NfaGxS_xOIQ6oJf04; userId=35ea6886-f77b-4253-864d-eba6d3f295b1; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
-2025-10-19T08:33:33.390928690Z | fixed.process | payload=injected_value_123 | result=Set-Cookie: sessionId=7G7t7-3DIQy1K_EE7yd8OF9oHsZ_zxYKGMfEb1wNamY; userId=7da33119-e25d-48da-ab29-ab895a474e8a; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:34:33 GMT; Secure; HttpOnly; SameSite=Lax
+2025-10-19T08:45:45.117195736Z | fixed.process | payload="double-quote" | result=Set-Cookie: sessionId=PeecxTYaAVc8DcyL21l6-sCh8kjHmsNxNwOxKu0pd20; userId=f2928b69-8133-41e4-afcb-cd1fc4071017; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:46:45 GMT; Secure; HttpOnly; SameSite=Strict
+2025-10-19T08:46:39.736582513Z | fixed.process | payload=ATTACK_STRING_1 | result=Set-Cookie: sessionId=EyfKz__NPLzg97rgdcTg8EnpORWw94NR_o1LfKmqQxA; userId=29778fe8-6dbd-4a2f-a610-b2cd95d6f4c6; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:47:39 GMT; Secure; HttpOnly; SameSite=Strict
+2025-10-19T08:46:39.739453807Z | fixed.process | payload="double-quote" | result=Set-Cookie: sessionId=FXQQJ9UqHzw2ZyP-8fPtYgcvnINDSRd7yJYrfAi6RUo; userId=e6acc598-d80c-4647-b5e9-93d221005652; Path=/; Max-Age=60; Expires=Sun, 19 Oct 2025 08:47:39 GMT; Secure; HttpOnly; SameSite=Strict
+2025-10-19T09:03:11.964287189Z | vulnerable.process | payload=ATTACK_STRING_1 | result=Set-Cookie: sessionId=ATTACK_STRING_1
+2025-10-19T09:03:11.967787443Z | vulnerable.process | payload=injected_value_123 | result=Set-Cookie: sessionId=injected_value_123
+2025-10-19T09:03:11.967897939Z | vulnerable.process | payload="double-quote" | result=Set-Cookie: sessionId="double-quote"
 ...
 ```
 

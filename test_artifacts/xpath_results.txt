@@ -78,3 +78,23 @@
 2025-10-19T08:46:39.801845733Z | vulnerable.queryByUsername | payload=bob | result=no-match
 2025-10-19T08:46:39.805696167Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
 2025-10-19T08:46:39.807777037Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T09:03:12.037980225Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T09:03:12.041272466Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T09:03:12.044030356Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T09:03:12.046600594Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T09:03:12.049211916Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T09:03:12.057684138Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T09:03:12.060542218Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T09:03:12.062677138Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T09:03:12.067436076Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T09:03:12.069786206Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
+2025-10-19T09:04:23.355554027Z | fixed.queryByUsername | payload=john | result=match
+2025-10-19T09:04:23.359125712Z | fixed.queryByUsername | payload=alice | result=match
+2025-10-19T09:04:23.361786699Z | fixed.queryByUsername | payload=bob | result=match
+2025-10-19T09:04:23.364810386Z | fixed.queryByUsername | payload=' or '1'='1 | result=match
+2025-10-19T09:04:23.367461111Z | fixed.queryByUsername | payload=" or "1"="1 | result=match
+2025-10-19T09:04:23.377325171Z | vulnerable.queryByUsername | payload=john | result=match_count=1 matches=<Username: john, password: john123, role: user>
+2025-10-19T09:04:23.380529403Z | vulnerable.queryByUsername | payload=alice | result=match_count=1 matches=<Username: alice, password: alice456, role: user>
+2025-10-19T09:04:23.382864388Z | vulnerable.queryByUsername | payload=bob | result=no-match
+2025-10-19T09:04:23.388415905Z | vulnerable.queryByUsername | payload=' or '1'='1 | result=match_count=3 matches=<Username: admin, password: secret_admin_pass, role: administrator> | <Username: john, password: john123, role: user> | <Username: alice, password: alice456, role: user>
+2025-10-19T09:04:23.390928927Z | vulnerable.queryByUsername | payload=" or "1"="1 | result=no-match
